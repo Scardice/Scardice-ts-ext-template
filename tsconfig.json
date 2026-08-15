@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "es2020",
+    "lib": ["es2020", "DOM"],
+
+    "experimentalDecorators": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+
+    "types": ["node"],
+    "allowJs": true,
+    "checkJs": true,
+    "strict": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+
+    "noEmit": true,
+    "isolatedModules": true,
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*.ts", "types/vendor/seal.d.ts", "plugin.config.mjs", "tools/**/*.mjs", "scripts/**/*.mjs"],
+  "exclude": ["node_modules/**"]
+}

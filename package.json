@@ -1,0 +1,35 @@
+{
+  "name": "scardice-ts-ext-template",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "pnpm@11.21.0",
+  "description": "余烬（SealDice）TypeScript 插件模板：零运行时依赖、seal 类型边界、默认严格",
+  "license": "MIT",
+  "repository": "https://github.com/Scardice/Scardice-ts-ext-template",
+  "keywords": ["scardice", "sealdice", "typescript", "plugin", "template"],
+  "engines": {
+    "node": ">=24.15.0"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "check": "pnpm typecheck && pnpm lint",
+    "build": "node tools/build.mjs --mode production",
+    "build:analyze": "node tools/build.mjs --mode production --metafile",
+    "build-dev": "node tools/build.mjs --mode development",
+    "build-dev:watch": "node tools/build.mjs --mode development --watch",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "smoke": "node scripts/smoke.mjs",
+    "pack:prepare": "node scripts/prepare-sealpack.mjs",
+    "pack:release": "node scripts/build-release.mjs"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^9.3.0",
+    "@types/node": "^24.0.0",
+    "esbuild": "^0.25.9",
+    "eslint": "^9.32.0",
+    "eslint-plugin-sonarjs": "^4.2.0",
+    "sealpack": "^0.1.2",
+    "typescript": "^6.0.3"
+  }
+}
